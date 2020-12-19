@@ -350,4 +350,5 @@ MigrationBackup/
 .ionide/
 
 #vscode settings
-.vscode
+.vscode/
+.DS_Store/
