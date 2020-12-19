@@ -5,9 +5,10 @@ To run the executable:
 
 - From thr root directory of Project
 
-$ java -jar CS586/Driver/GasPumpDriver.jar
+
+  $ java -jar CS586/Driver/GasPumpDriver.jar
 
 
 To Run EXE file:
 
-- Go To CS586/Driver/GasPumpDriver.exe
+-   Go To CS586/Driver/GasPumpDriver.exe
