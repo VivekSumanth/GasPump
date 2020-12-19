@@ -1,11 +1,7 @@
 package AllGasPumps;
-
-import MDA_EFSM.mda_efsm;
-
-
-import OutputClasses.Output;
-import AbstractFactoryClasses.*;
 import DataStore.*;
+import AbstractFactoryClasses.*;
+
 
 
 /*
@@ -13,18 +9,13 @@ import DataStore.*;
  * Every method selected in main has implementation here.
  */
 
-public class GasPump_2 {
+public class GasPump_2 extends GasPump {
 
-	//	Pointers to DataStore and mda_efsm
-	mda_efsm efsm;
-	public Data2 data;
-	
 	/*
 	 * Initialization of Object of mda_efsm when GasPump 2 is invoked. 
 	 */
 	public GasPump_2(AbstractFactory abstractFactory) {
-		efsm = new mda_efsm (new Output(abstractFactory)); 
-		data = (Data2) abstractFactory.getData(); 
+			super(abstractFactory); 
 	}
 
 	/*
@@ -33,6 +24,7 @@ public class GasPump_2 {
 
 	// Activate Method.
 	public void Activate(float a, float b, float c) {
+		 Data2 data = (Data2) this.data;
 		if (a > 0 && b > 0 && c > 0 ) {
 			
 			data.setTemp_a(a);
@@ -54,8 +46,6 @@ public class GasPump_2 {
 
 	//PayCredit method
 	public void PayCredit() {
-		 System.out.println("	7. Approved()");
-		 System.out.println("	3. Reject()");
 		efsm.PayCredit();
 		
 	}
@@ -69,6 +59,7 @@ public class GasPump_2 {
 
 	//PayDebit method
 	public void PayDebit(String a) {
+		Data2 data = (Data2) this.data;
 		data.setTemp_p(a);
 		efsm.PayDebit();
 		
@@ -76,11 +67,9 @@ public class GasPump_2 {
 	
 	//Pin method
 	public void Pin(String b) {
-
+		Data2 data = (Data2) this.data;
 		String Originalpin = data.getpin();
-
-		
-		if (Originalpin.equals(b) && Originalpin != null) {
+		if (Originalpin != null && Originalpin.equals(b) ) {
 			efsm.CorrectPin();
 		}
 		else {
@@ -116,6 +105,7 @@ public class GasPump_2 {
 	
 	//startPump method
 	public void StartPump() {
+		 Data2 data = (Data2) this.data;
 		if (data.getPrice() != 0) {
 			efsm.StartPump();
 		} else {

@@ -7,6 +7,7 @@ public class StoreCash1 extends StoreCash {
 		super(data);
 	}
 	
+	// Store Cash
 
 	public void StoreCash() {
 		Data1 d = (Data1) data;

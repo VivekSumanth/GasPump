@@ -7,7 +7,7 @@ public class PumpGasUnit2 extends PumpGasUnit {
 		super(data);
 	}
 
-
+	// SET G AND TOTAL
 	@Override
 	public void PumpGasUnit() {
 		Data2 d = (Data2) data;

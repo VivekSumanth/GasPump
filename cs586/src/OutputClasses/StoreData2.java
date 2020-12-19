@@ -7,7 +7,9 @@ public class StoreData2 extends StoreData {
 	public StoreData2(Data data) {
 		super(data);
 	}
-
+	/*
+	 * Take data from data 2 and  in permanent variables
+	 */
 	@Override
 	public void StoreData() {
 		Data2 d = (Data2) data; 

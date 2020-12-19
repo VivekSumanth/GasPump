@@ -5,7 +5,9 @@ public class DisplayMenu2 extends DisplayMenu {
 	public DisplayMenu2(Data data) {
 		super(data);
 	}
-	
+	/*
+	 * Displays Available Options and Payment Approved Message
+	 */
 	public void DisplayMenu() {
 		
 		Data2 d = (Data2) data;

@@ -9,10 +9,9 @@ public class SetW2 extends SetW{
     }
 
     @Override
-    public void SetW() {
-        Data2 d = (Data2) data;
-//        d.setL(0);
-//        d.setTotal(0);
+    public void SetW(int w) {
+
+
     }
 
 }

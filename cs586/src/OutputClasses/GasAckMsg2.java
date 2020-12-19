@@ -12,6 +12,9 @@ public class GasAckMsg2 extends GasAckMsg {
 
 
 	@Override
+	/*
+	 * Displays GasPumped and avaialble options in liters
+	 */
 	public void GasAckMsg() {
 		Data2 d = (Data2) data;
 		System.out.println("");
@@ -19,5 +22,6 @@ public class GasAckMsg2 extends GasAckMsg {
 		System.out.println("");
 		System.out.println("	11 : PumpGallon");
 		System.out.println("	12 : StopPump");
+		System.out.println("    13 : FullTank");
 	}
 }

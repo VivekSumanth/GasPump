@@ -8,6 +8,7 @@ public class StorePin2 extends StorePin {
 		super(data);
 
 	}
+	// Store pin using setpin method
 	public void StorePin() {
 
 		Data2 d = (Data2) data;

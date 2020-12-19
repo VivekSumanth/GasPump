@@ -1,14 +1,13 @@
 package StateClasses;
-
-import OutputClasses.Output;
+import OutputClasses.*;
 /*
  * At this State only CorrectPin and InCorrectPin is Invoked.
  */
 public class S8 extends State{
 public int id = 6;
 	
-	public S8(Output output) {
-		super(output);
+	public S8(Output op) {
+		super(op);
 	}
 
 
@@ -30,17 +29,17 @@ public int id = 6;
 	
 	//Invokes DisplayMenu in Output Class
 	public void CorrectPin() {
-		output.EjectCard();
-		output.DisplayMenu();
+		this.op.EjectCard();
+		this.op.DisplayMenu();
 	}
 	//Invokes InCorrectPinMsg in Output Class
 	public void InCorrectPin() {
-		output.IncorrectPinMsg();
+		this.op.IncorrectPinMsg();
 	}
 	
 	public void TooManyAttempts() {
-		output.IncorrectPinMsg();
-		output.EjectCard();
+		this.op.IncorrectPinMsg();
+		this.op.EjectCard();
 	}
 	
 	public void SelectGas(int g) {

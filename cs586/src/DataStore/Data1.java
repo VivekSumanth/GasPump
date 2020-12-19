@@ -75,10 +75,15 @@ public class Data1 extends Data {
 	public void setTemp_c(int temp_c) {
 		this.temp_c = temp_c;
 	}
-
-	public void setW(int w) { this.w = w; }
-
-	public int getW(){ return this.w; };
+	
+	//set W
+	public void setW(int w) { 
+		this.w = w; 
+	}
+	// get W
+	public int getW(){ 
+		return this.w;
+		};
 
 }	
 

@@ -8,7 +8,7 @@ public class StorePin1 extends StorePin {
 
 	}
 
-
+	// No action for gas pump 1
 	public void StorePin() {
 
 		

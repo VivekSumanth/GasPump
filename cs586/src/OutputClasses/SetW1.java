@@ -1,19 +1,22 @@
 package OutputClasses;
-
 import DataStore.*;
 
-public class SetW1 extends SetW{
 
+public class SetW1 extends SetW {
+	
     public SetW1(Data data) {
-        super(data);
-    }
+		super(data);
 
+	}
+
+ 
     @Override
-    public void SetW() {
+    public void SetW(int w) {
         Data1 d = (Data1) data;
-//        d.setW();
-//        d.setL(0);
-//        d.setTotal(0);
+        if(w == 1) {
+        	System.out.println(" approve to continue ");
+        }
+        d.setW(w);
     }
 
 }

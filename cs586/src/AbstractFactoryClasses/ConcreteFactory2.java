@@ -9,7 +9,7 @@ public  class ConcreteFactory2 extends AbstractFactory {
 	
 	//Pointers 
 	// Pointer to Data2
-	private Data2 data2;
+	public final Data2 data2;
 	
 	//Object to Data2
 	public ConcreteFactory2() {
@@ -79,13 +79,6 @@ public  class ConcreteFactory2 extends AbstractFactory {
 		return new CancelMsg2();
 	}
 
-	//returns ReadyMsg2
-	@Override
-	public ReadyMsg getReadyMsg() {
-		
-		return new ReadyMsg2(this.data2);
-	}
-
 	//returns Initial Values2
 	@Override
 	public SetInitialValues getSetInitialValues() {
@@ -107,14 +100,7 @@ public  class ConcreteFactory2 extends AbstractFactory {
 		return new GasAckMsg2(this.data2);
 	}
 	
-	//returns StopMsg2
-	@Override
-	public StopMsg getStopMsg() {
-		
-		return new StopMsg2();
-	}
-	
-	
+
 	//returns PrintReceipt2
 	@Override
 	public PrintReceipt getPrintReceipt() {

@@ -1,6 +1,5 @@
 package StateClasses;
-
-import OutputClasses.Output;
+import OutputClasses.*;
 
 
 /*
@@ -11,8 +10,8 @@ public class S2 extends State {
 	
 	public int id = 3;
 	
-	public S2(Output output) {
-		super(output);
+	public S2(Output op) {
+		super(op);
 	}
 
 
@@ -53,12 +52,12 @@ public class S2 extends State {
 	}
 	// Approved method invokes DisplayMenu() in Output
 	public void Approved() {
-		output.DisplayMenu();
-		output.EjectCard();
+		this.op.DisplayMenu();
+		this.op.EjectCard();
 	}
 	// Reject method invokes RejectMsg() in Output
 	public void Reject() {
-		output.RejectMsg();
+		this.op.RejectMsg();
 	}
 	
 	public void Cancel() {

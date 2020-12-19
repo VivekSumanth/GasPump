@@ -1,26 +1,50 @@
+/*
+* Centralralized Design Pattern Implementataion
+*/
+
 package MDA_EFSM;
 import StateClasses.*;
 import OutputClasses.*;
 
+
 public class mda_efsm {
 	public State state;  //Points to the current state 
 	Integer k = 0;		// counter to counter number of Incorrect attempts
+	
+	
+	/* Methods in MDA_EFSM
+	 * Activate()
+	 * PayCash()
+	 * PayCredit()
+	 * PayDebit()
+	 * Correctpin()
+	 * InCorrectPin()
+	 * TooManyAttempts()
+	 * SelectGas()
+	 * Approved
+	 * Reject
+	 * Cancel
+	 * StartPump()
+	 * Pump()
+	 * StopPump()
+	 * Start
+	 */
 
 	public State list[];
 	/*
 	 * StatePattern and all stated in list 
 	 * Initial State is Start state
 	 */
-	
-	public mda_efsm(Output output) {
+
+	public mda_efsm(Output op) {
 		list = new State[7];
-		list[0] = new Start(output); 
-		list[1] = new S0(output);
-		list[2] = new S1(output);
-		list[3] = new S2(output);
-		list[4] = new S3(output);
-		list[5] = new S5(output);
-		list[6] = new S8(output);
+		list[0] = new Start(op); 
+		list[1] = new S0(op);
+		list[2] = new S1(op);
+		list[3] = new S2(op);
+		list[4] = new S3(op);
+		list[5] = new S5(op);
+		list[6] = new S8(op);
 		state = list[0]; //setting initial state to start state.
 	}
 
@@ -192,4 +216,5 @@ public class mda_efsm {
 			state = list[2];
 		}
 	}
+	
 }

@@ -2,6 +2,7 @@ package OutputClasses;
 
 public class PayMsg1 extends PayMsg {
 	
+	//Pay message and available options
 	public void PayMsg() {
 
 		System.out.println("");

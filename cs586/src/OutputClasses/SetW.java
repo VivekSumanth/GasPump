@@ -6,9 +6,10 @@ public abstract class SetW {
     public Data data;
 
     SetW(Data data) {
-        this.data = data;
+	  this.data = data;
     }
 
-    public abstract void SetW();
+    public abstract void SetW(int w);
+
 
 }

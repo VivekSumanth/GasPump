@@ -7,6 +7,7 @@ public class ReturnCash1 extends ReturnCash{
 		super(data);
 	}
 
+	//return Cash when transaction cancelled
 
 	public void ReturnCash() {
 

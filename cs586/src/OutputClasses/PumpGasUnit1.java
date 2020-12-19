@@ -7,7 +7,7 @@ public class PumpGasUnit1 extends PumpGasUnit{
 		super(data);
 	}
 
-
+	// SET L AND TOTAL
 	public void PumpGasUnit() {
 		Data1 d = (Data1) data;
 		d.setL(d.getL()+1);

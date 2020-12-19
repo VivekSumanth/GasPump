@@ -8,7 +8,7 @@ public class ConcreteFactory1 extends AbstractFactory{
 	
 	//pointes 
 	//Pointer to Data1
-	private Data1 data1;
+	public final Data1 data1;
 	
 	//object to Data1
 	public ConcreteFactory1() {
@@ -40,10 +40,7 @@ public class ConcreteFactory1 extends AbstractFactory{
 		return new RejectMsg1();
 	}
 	
-	//returns ReadyMsg1
-	public ReadyMsg getReadyMsg() {
-		return new ReadyMsg1(this.data1);
-	}
+
 	
 	//returns Initial Values1 
 	public SetInitialValues getSetInitialValues() {
@@ -81,10 +78,6 @@ public class ConcreteFactory1 extends AbstractFactory{
 		return new GasAckMsg1(this.data1);
 	}
 
-	//returns StopMsg
-	public StopMsg getStopMsg() {
-		return new StopMsg1();
-	}
 	
 	//returns PrintReceipt
 	public PrintReceipt getPrintReceipt() {
@@ -106,7 +99,9 @@ public class ConcreteFactory1 extends AbstractFactory{
 		return new EjectCard1();
 	}
 
-	public SetW getSetW() { return new SetW1(this.data1); }
+	public SetW getSetW() { 
+		return new SetW1(this.data1); 
+		}
 
 
 	public StorePin getStorePin() {

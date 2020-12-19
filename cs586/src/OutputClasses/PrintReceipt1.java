@@ -8,6 +8,7 @@ public class PrintReceipt1 extends PrintReceipt {
 		super(data);
 	}
 	
+	//Receipt and displays details
 	public void PrintReceipt() {
 		Data1 d = (Data1) data;
 		System.out.println("");
@@ -19,8 +20,9 @@ public class PrintReceipt1 extends PrintReceipt {
 		System.out.println("price of the fuel							: " + d.getPrice());
 		System.out.println("The Total Fuel Pumped							: " + d.getL());
 		System.out.println("Total Amount to be paid							: " + d.getTotal());
-		if(d.getW() == 1){
-			System.out.println("You get back " + (d.getCash() - d.getTotal()));
+
+		if(d.getW() == 0){
+			System.out.println("You get back 								: "+ (d.getCash() - d.getTotal()));
 		}
 		System.out.println("-----------------------------------------------------------------------------------------------------");
 		System.out.println("-----------------------------------------------------------------------------------------------------");

@@ -1,5 +1,4 @@
 package StateClasses;
-
 import OutputClasses.Output;
 /*
  * At this State only PayCash() is Invoked.
@@ -8,8 +7,8 @@ public class S1 extends State {
 	
 	public int id = 2;
 	
-	public S1(Output output) {
-		super(output);
+	public S1(Output op) {
+		super(op);
 	}
 
 	public void Activate() {
@@ -18,20 +17,18 @@ public class S1 extends State {
 	
 	//PayCash Method invokes StoreCash and DisplayMenu in Output Class
 	public void PayCash() {
-		output.StoreCash();
-		output.DisplayMenu();
-//		output.SetW();
+		this.op.StoreCash();
+		this.op.DisplayMenu();
 	}
 	
 	public void PayCredit() {
-		// No Action
+		this.op.setWValue(1);
 	}
 	
 	public void PayDebit() {
-		output.StorePin();
-
-		output.EnterPinMsg();
-		
+		this.op.StorePin();
+		this.op.EnterPinMsg();
+		this.op.setWValue(1);
 	}
 	
 	public void CorrectPin() {

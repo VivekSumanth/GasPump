@@ -1,6 +1,6 @@
 package StateClasses;
+import OutputClasses.*;
 
-import OutputClasses.Output;
 /*
  * At this State only Activate is Invoked.
  * Initial State
@@ -8,13 +8,13 @@ import OutputClasses.Output;
 public class Start extends State {
 	public int id = 0;
 	
-	public Start(Output output) {
-		super(output);
+	public Start(Output op) {
+		super(op);
 	}
 	
 	//Invokes StoreData in OutputClass
 	public void Activate() {
-		output.StoreData();
+		this.op.StoreData();
 	}
 	
 	public void PayCash() {

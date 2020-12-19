@@ -26,9 +26,7 @@ public class Output {
 	public EnterPinMsg enterPinMsg;
 	public EjectCard ejectcard;
 	public SetW setw;
-//	public setW
-	public ReadyMsg readyMsg;
-	public StopMsg stopMsg;
+
 
 	/*
 	 * ABSTRACT FATCORY PATTERN 
@@ -46,11 +44,9 @@ public class Output {
 		setSetPrice(abstractFactory.getSetPrice());
 		setCancelMsg(abstractFactory.getCancelMsg());
 		setReturnCash(abstractFactory.getReturnCash());
-		setReadyMsg(abstractFactory.getReadyMsg());
 		setSetInitialValues(abstractFactory.getSetInitialValues());
 		setPumpGasUnit(abstractFactory.getPumpGasUnit()); 
 		setGasAckMsg(abstractFactory.getGasAckMsg());
-		setStopMsg(abstractFactory.getStopMsg());
 		setPrintReceipt(abstractFactory.getPrintReceipt());
 		setEnterPinMsg(abstractFactory.getEnterPinMsg());
 		setStorePin(abstractFactory.getStorePin());
@@ -172,15 +168,6 @@ public class Output {
 		this.setInitialValues = setInitialValues;
 	}
 	
-	//SetReadyMsg
-	public void setReadyMsg(ReadyMsg readyMsg) {
-		this.readyMsg = readyMsg;
-	}
-
-	//call ReadyMsg
-	public void ReadyMsg() {
-		this.readyMsg.ReadyMsg();
-	}
 
 	//Set Initial Values
 	public void SetInitialValues() {
@@ -208,15 +195,6 @@ public class Output {
 		this.gasAckMsg = gasAckMsg;
 	}
 	
-	//set StopMsg
-	public void setStopMsg(StopMsg stopMsg) {
-		this.stopMsg = stopMsg;
-	}
-	
-	//call StopMsg
-	public void StopMsg() {
-		this.stopMsg.StopMsg();
-	}
 	
 	//call PrintReceipt
 	public void PrintReceipt() {
@@ -227,26 +205,27 @@ public class Output {
 	public void setPrintReceipt(PrintReceipt printReceipt) {
 		this.printReceipt = printReceipt;
 	}
-
+	
+	//eject card
 	public void EjectCard() {
 		this.ejectcard.EjectCard();
 	}
 	
+	//set ejectcard
 	public void setEjectCard(EjectCard ejectCard) {
 		this.ejectcard = ejectCard;
 	}
-
+	
+	//set w ( flag)
 	public void setW(SetW setw){
 		this.setw = setw;
 	}
 
-	public void setWValue(){
-		this.setw.SetW();
+	// setWValue
+	public void setWValue(int i){
+		this.setw.SetW(i);
 	}
 
-//	public void SetW() {
-////		this.setW().SetW();
-//	}
 
 
 }

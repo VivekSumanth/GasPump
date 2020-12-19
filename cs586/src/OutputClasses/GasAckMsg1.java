@@ -7,10 +7,10 @@ public class GasAckMsg1 extends GasAckMsg {
 
 	public GasAckMsg1(Data data) {
 		super(data);
-		// TODO Auto-generated constructor stub
-	}
+		
+		}
 
-	//display the quantity of poured gas in gallon
+	//display the quantity of pumped gas in Liters
 	@Override
 	public void GasAckMsg() {
 		Data1 d = (Data1) data;

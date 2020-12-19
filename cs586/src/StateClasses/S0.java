@@ -1,5 +1,4 @@
 package StateClasses;
-
 import OutputClasses.*;
 
 /*
@@ -9,8 +8,8 @@ public class S0 extends State{
 	
 	public int id = 1;
 	
-	public S0(Output output) {
-		super(output);
+	public S0(Output op) {
+		super(op);
 	}
 
 	public void Activate() {
@@ -74,7 +73,7 @@ public class S0 extends State{
 	}
 	// Invokes PayMsg of Output Class
 	public void Start() {
-		output.PayMsg();
+		this.op.PayMsg();
 	}
 	
 	public int getStateId() {

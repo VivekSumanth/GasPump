@@ -1,0 +1,91 @@
+package StateClasses;
+
+import MDA_EFSM.mda_efsm;
+import OutputClasses.*;
+
+/*
+ * At this State only SelectGas(),startPump(),Cancel() is Invoked.
+ */
+
+public class S3 extends State {
+	
+	public int id = 4;
+	
+	public S3(mda_efsm mda_efsm) {
+		super(mda_efsm);
+	}
+
+	public void Activate() {
+		notatthisstatemsg();
+	}
+	
+	public void PayCash() {
+		notatthisstatemsg();
+	}
+	
+	public void PayCredit() {
+		notatthisstatemsg();
+	}
+	
+	public void PayDebit() {
+		notatthisstatemsg();
+	}
+	
+	public void CorrectPin() {
+		notatthisstatemsg();
+	}
+	
+	public void InCorrectPin() {
+		notatthisstatemsg();
+	}
+	
+	public void TooManyAttempts() {
+		notatthisstatemsg();
+	}
+	
+	//SelectGas Method Invokes SetPrice(g) in Output Class
+	public void SelectGas(int g) {
+		this.efsm.getOp().SetPrice(g);
+	}
+	
+	public void Pump() {
+		notatthisstatemsg();
+	}
+	
+	public void Approved() {
+		notatthisstatemsg();
+	}
+	
+	public void Reject() {
+		notatthisstatemsg();
+	}
+	
+	public void Cancel() {
+		this.efsm.getOp().CancelMsg();
+		this.efsm.getOp().ReturnCash();
+	}
+	
+	// StartPump() Method Invokes SetInitialValues() in Output Class
+	public void StartPump() {
+
+		this.efsm.getOp().SetInitialValues();
+	}
+	
+	public void PumpLiter() {
+		notatthisstatemsg();
+	}
+	
+	public void StopPump() {
+		notatthisstatemsg();
+	}
+	
+	public void Start() {
+		notatthisstatemsg();
+	}
+	
+	public int getStateId() {
+		return this.id;
+	} 
+	
+
+}

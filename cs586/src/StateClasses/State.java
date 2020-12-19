@@ -3,10 +3,10 @@ import OutputClasses.*;
 
 // Abstract Class
 public abstract class State {
-	public Output output;
+	public Output op;
 	
-	public State(Output output) {
-		this.output = output;
+	public State(Output op) {
+		this.op = op;
 	}
 	
 	public abstract void Activate();

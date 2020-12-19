@@ -5,7 +5,9 @@ public class DisplayMenu1 extends DisplayMenu {
 	public DisplayMenu1(Data data) {
 		super(data);
 	}
-	
+	/*
+	 * Displays Available Options and Payment Approved Message
+	 */
 	public void DisplayMenu() {
 		
 		System.out.println("");

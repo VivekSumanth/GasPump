@@ -1,7 +1,6 @@
 package StateClasses;
 
 import OutputClasses.*;
-
 /*
  * At this State only SelectGas(),startPump(),Cancel() is Invoked.
  */
@@ -10,8 +9,8 @@ public class S3 extends State {
 	
 	public int id = 4;
 	
-	public S3(Output output) {
-		super(output);
+	public S3(Output op) {
+		super(op);
 	}
 
 	public void Activate() {
@@ -44,7 +43,7 @@ public class S3 extends State {
 	
 	//SelectGas Method Invokes SetPrice(g) in Output Class
 	public void SelectGas(int g) {
-		output.SetPrice(g);
+		this.op.SetPrice(g);
 	}
 	
 	public void Pump() {
@@ -60,15 +59,14 @@ public class S3 extends State {
 	}
 	
 	public void Cancel() {
-		output.CancelMsg();
-		output.ReturnCash();
+		this.op.CancelMsg();
+		this.op.ReturnCash();
 	}
 	
-	// StartPump() Method Invokes SetInitialValues() and ReadyMsg() in Output Class
+	// StartPump() Method Invokes SetInitialValues() in Output Class
 	public void StartPump() {
 
-		output.SetInitialValues();
-		output.ReadyMsg();
+		this.op.SetInitialValues();
 	}
 	
 	public void PumpLiter() {

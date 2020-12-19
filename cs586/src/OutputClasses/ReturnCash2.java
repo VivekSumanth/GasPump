@@ -8,6 +8,7 @@ public class ReturnCash2 extends ReturnCash {
 		super(data);
 
 	}
+	//No action
 
 	public void ReturnCash() {
 		

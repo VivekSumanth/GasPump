@@ -3,6 +3,9 @@ package OutputClasses;
 
 public class EnterPinMsg2 extends EnterPinMsg {
 
+	/*
+	 * Action PIN and enterpin  message
+	 */
 
 
 	@Override
